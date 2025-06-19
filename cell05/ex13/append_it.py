@@ -1,15 +1,11 @@
+#!/usr/bin/env python3
 import sys
 
-def main():
-    params = sys.argv[1:]
-    if len(params) == 0:
-        print("none")
-        return
+args = sys.argv[1:] 
 
-for p in params:
-    if p.endswith("ism"):
-        continue
-    print(p + "ism")
-
-if __name__ == "__main__":
-    main()
+if len(args) == 0:
+    print("none")
+else:
+    for word in args:
+        if not word.endswith("ism"):
+            print(word + "ism")
